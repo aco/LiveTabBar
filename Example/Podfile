@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LiveTabBar_Example' do
+  pod 'LiveTabBar', :path => '../'
+
+  target 'LiveTabBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
