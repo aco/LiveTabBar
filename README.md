@@ -17,7 +17,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 | Spin         | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/tab-spin.gif" />  | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/badge-spin.gif" />
 
 ## About
-LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simple interface for animating tab bar items and item badges. The library uses Core Animation (`CAAnimation`) and provides a set of default animations, but you can create your own so long as they conform to `CAAnimation`.
+LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simple interface built on top of UIKit for animating tab bar items and item badges. The library uses Core Animation (`CAAnimation`) and provides a set of default animations, but you can create your own so long as they conform to `CAAnimation`.
+
+This library was made for subtle tab bar enhancements. If you are looking for complete flexibility, check out [ESTabBarController](https://github.com/eggswift/ESTabBarController) which implements a custom tab bar system.
 
 ## Usage
 ### Tab Controller
@@ -36,6 +38,7 @@ For a simpler interface, the live badges are implemented as an extension to `UIT
 ```Swift
 self.tabBarController?.setLiveBadge(tabPageIndex: 0, value: "1", backgroundColor: .red,
                                     animation: DefaultAnimation.wobble) // present
+                                    
 self.tabBarController?.dismissLiveBadge(tabPageIndex: self.tabPageIndex, fadeDuration: 0.25) // dismiss
 ```
 
