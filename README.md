@@ -9,6 +9,13 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. Alternatively, run `pod try LiveTabBar` from the terminal.
 
+| Name         | Tab Bar Demo   | Badge Demo    |
+| :---         |     :---:      |          ---: |
+| Spring       | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/tab-spring.gif" />  | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/badge-spring.gif" />
+| Bounce       | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/tab-bounce.gif" />  | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/badge-bounce.gif" />
+| Wobble       | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/tab-wobble.gif" />  | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/badge-wobble.gif" />
+| Spin         | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/tab-spin.gif" />  | <img src="https://raw.githubusercontent.com/cewpur/LiveTabBar/master/demos/badge-spin.gif" />
+
 ## About
 LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simple interface for animating tab bar items and item badges. The library uses Core Animation (`CAAnimation`) and provides a set of default animations, but you can create your own so long as they conform to `CAAnimation`.
 
@@ -17,7 +24,7 @@ LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simp
 Use `LiveTabBarController` in place of `UITabBarController`, supplying a tab animation. It subclasses `UITabBarController` and the interface has not been restricted or modified. From there, add your tabs and controllers as normal!
 
 ```Swift
-let tabController = LiveTabBarController(tabItemAnimation: animationOption)
+let tabController = LiveTabBarController(tabItemAnimation: DefaultAnimation.spin)
 tabController.viewControllers = [...
 
 self.window?.rootViewController = UINavigationController(rootViewController: tabController)
@@ -27,7 +34,8 @@ self.window?.rootViewController = UINavigationController(rootViewController: tab
 For a simpler interface, the live badges are implemented as an extension to `UITabBarController` and can be presented & dismissed without redundant casting. For example:
 
 ```Swift
-self.tabBarController?.setLiveBadge(tabPageIndex: 0, value: "1", backgroundColor: .red, animation: DefaultAnimation.wobble) // present
+self.tabBarController?.setLiveBadge(tabPageIndex: 0, value: "1", backgroundColor: .red,
+                                    animation: DefaultAnimation.wobble) // present
 self.tabBarController?.dismissLiveBadge(tabPageIndex: self.tabPageIndex, fadeDuration: 0.25) // dismiss
 ```
 
