@@ -7,9 +7,29 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. Alternatively, run `pod try LiveTabBar` from the terminal.
 
-## Requirements
+## About
+LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simple interface for animating tab bar items and item badges. The library uses Core Animation (`CAAnimation`) and provides a set of default animations, but you can create your own so long as they conform to `CAAnimation`.
+
+## Usage
+### Tab Controller
+Use `LiveTabBarController` in place of `UITabBarController`, supplying a tab animation. It subclasses `UITabBarController` and the interface has not been restricted or modified. From there, add your tabs and controllers as normal!
+
+```Swift
+let tabController = LiveTabBarController(tabItemAnimation: animationOption)
+tabController.viewControllers = [...
+
+self.window?.rootViewController = UINavigationController(rootViewController: tabController)
+```
+
+### Badges
+For a simpler interface, the live badges are implemented as an extension to `UITabBarController` and can be presented & dismissed without redundant casting. For example:
+
+```Swift
+self.tabBarController?.setLiveBadge(tabPageIndex: 0, value: "1", backgroundColor: .red, animation: DefaultAnimation.wobble) // present
+self.tabBarController?.dismissLiveBadge(tabPageIndex: self.tabPageIndex, fadeDuration: 0.25) // dismiss
+```
 
 ## Installation
 
@@ -19,10 +39,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'LiveTabBar'
 ```
-
-## Author
-
-cewpur, cewp3r@gmail.com
 
 ## License
 
