@@ -1,0 +1,6 @@
+framework module LiveTabBar {
+  umbrella header "LiveTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

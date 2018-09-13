@@ -1,0 +1,16 @@
+PODS:
+  - LiveTabBar (0.1.0)
+
+DEPENDENCIES:
+  - LiveTabBar (from `../`)
+
+EXTERNAL SOURCES:
+  LiveTabBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LiveTabBar: a70459ed944268df19503cba2d159ebe0b4af860
+
+PODFILE CHECKSUM: 52166fc72206bc60b75c7fb58fd896fd28a046f0
+
+COCOAPODS: 1.5.3
