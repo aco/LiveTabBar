@@ -19,7 +19,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## About
 LiveTabBar is an easy way to spruce up tabbed iOS applications. It offers a simple interface built on top of UIKit for animating tab bar items and item badges. The library uses Core Animation (`CAAnimation`) and provides a set of default animations, but you can create your own so long as they conform to `CAAnimation`.
 
-This library was made for subtle tab bar enhancements. If you are looking for complete flexibility, check out [ESTabBarController](https://github.com/eggswift/ESTabBarController) which implements a custom tab bar system.
+This library was made for subtle tab bar enhancements on top of UIKit. If you are looking for complete flexibility, check out [ESTabBarController](https://github.com/eggswift/ESTabBarController) which implements a custom tab bar system.
 
 ## Usage
 ### Tab Controller
